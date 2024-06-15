@@ -2,12 +2,12 @@
 :root {
   --fixed-m-x: 0.9375rem;
   --fixed-m-y: 1.25rem;
-  --logo-h: 30px;
+  --logo-h: 1.875rem;
 }
 
 *,
-*::after,
-*::before {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -21,16 +21,32 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 1.125rem;
   line-height: 1.5625rem;
+  background-color: #fd5f8d;
   animation-name: bg-change;
-  animation-duration: 5s;
+  animation-timeline: scroll();
 }
 
 @keyframes bg-change {
-  0% {
-    background-color: #e30512;
+  0%, 8.3333333333% {
+    background-color: #fd5f8d;
+  }
+  16.6666666667%, 25% {
+    background-color: #fff;
+  }
+  33.3333333333%, 41.6666666667% {
+    background-color: #00c1b5;
+  }
+  50%, 58.3333333333% {
+    background-color: #ff651a;
+  }
+  66.6666666667%, 75% {
+    background-color: #ffbe00;
+  }
+  83.3333333333%, 91.6666666667% {
+    background-color: #1d3fbb;
   }
   100% {
-    background-color: #1d3fbb;
+    background-color: #e30512;
   }
 }
 img {
@@ -121,10 +137,9 @@ a.fixed, .fixed a {
 .issue {
   scroll-snap-align: center;
   display: grid;
-  grid-template-rows: minmax(calc(2 * var(--fixed-m-y) + var(--logo-h)), 1fr) auto 5lh minmax(calc(2 * var(--fixed-m-y)), 0.5fr);
+  grid-template-rows: minmax(calc(2 * var(--fixed-m-y) + var(--logo-h)), 1fr) auto 5lh minmax(calc(2 * var(--fixed-m-y)), 1fr);
   grid-template-columns: minmax(var(--fixed-m-x), 1fr) minmax(0, 26.25rem) minmax(var(--fixed-m-x), 1fr);
   min-height: 100svh;
-  transform: rotate(180deg);
 }
 .issue__img {
   grid-row: 2;
