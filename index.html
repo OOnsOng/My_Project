@@ -4,8 +4,131 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my project</title>
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
-    <h1>my project</h1>
+    <!-- <nav class="nav">
+      <div class="nav__wrapper"> -->
+    <!-- <div class="logo">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="Home"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM15.4225 22.7124V25.607C18.1716 25.7753 20.8606 24.7551 22.806 22.8056C26.5647 19.0469 26.5647 12.9531 22.806 9.19477C22.4644 8.85297 22.0977 8.53716 21.709 8.25L19.6336 10.3252L10.3245 19.6332C8.61894 16.9674 8.99804 13.4741 11.2358 11.2362C12.6405 9.8287 14.5963 9.11525 16.5775 9.28762V6.39295C13.8284 6.22472 11.1394 7.24504 9.19403 9.19458C5.43532 12.9532 5.43532 19.047 9.19403 22.8054C9.53564 23.1472 9.90231 23.463 10.291 23.7501L12.3663 21.675L21.6754 12.3668C23.381 15.0325 23.0019 18.5259 20.7641 20.7638C19.3594 22.1713 17.4036 22.8847 15.4225 22.7124Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div> -->
+    <!-- <ul class="menu menu--pos-left"> -->
+    <!-- (li>a.menu__item[href="#"]lorem1)*4 (밑에처럼 만들기 위해 필요한 공식) -->
+    <!-- <li><a href="#" class="menu__item"></a>Lorem</li>
+          <li><a href="#" class="menu__item"></a>Fuga</li>
+          <li><a href="#" class="menu__item"></a>Modi</li>
+          <li><a href="#" class="menu__item"></a>Placeat</li>
+        </ul> -->
+    <!-- <ul class="menu menu--pos-right">
+          <li><a href="#" class="menu__item"></a>log in</li>
+          <li>
+            <a href="#" class="menu__item menu__item--style-filled"></a>start
+            free trial
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+    <img class="fixed fixed--pos-tl fixed--role-logo" src="./assets/logo.png" />
+    <a class="fixed fixed--pos-tr fixed--role-contact" href="#"
+      >info@backstagetalks.com</a
+    >
+    <ol class="fixed fixed--pos-br fixed--role-list">
+      <!-- (li>a[href="#issue-$"]>{issue #$})*7 -->
+      <li><a href="#issue-1">issue #1</a></li>
+      <li><a href="#issue-2">issue #2</a></li>
+      <li><a href="#issue-3">issue #3</a></li>
+      <li><a href="#issue-4">issue #4</a></li>
+      <li><a href="#issue-5">issue #5</a></li>
+      <li><a href="#issue-6">issue #6</a></li>
+      <li><a href="#issue-7">issue #7</a></li>
+    </ol>
+    <div class="fixed fixed--pos-bl fixed--role-about">
+      <p class="fixed__desc">
+        Backstage Talks is a magazine of casual, but in depth dialogues on
+        design and business. Our decisions shape and influence this complex
+        world—to have a chance to make the right ones, we need to talk.
+      </p>
+      <p class="fixed__copyright">
+        © 2024 <a href="#">Published by Büro Milk</a>
+      </p>
+      <!-- p태그 만들기: 문장 드래그하고 alt + W -->
+      <a class="fixed__policy" href="#">Privacy Policy</a>
+    </div>
+    <!-- 
+    (#issue-$.issue.issue--no-$>img[src="./assets/bts ($).png"].issue__img+.issue__text>(p.issue__title>{issue #$})+p.issue__link>{buy here})*8 -->
+
+    <div class="wrapper">
+      <div id="issue-1" class="issue issue--no-1">
+        <img src="./assets/bts (1).png" alt="" class="issue__img" />
+        <div class="issue__text">
+          <p class="issue__title">issue #1</p>
+          <p class="issue__link">buy here</p>
+        </div>
+      </div>
+      <div id="issue-2" class="issue issue--no-2">
+        <img src="./assets/bts (2).png" alt="" class="issue__img" />
+        <div class="issue__text">
+          <p class="issue__title">issue #2</p>
+          <p class="issue__link">buy here</p>
+        </div>
+      </div>
+      <div id="issue-3" class="issue issue--no-3">
+        <img src="./assets/bts (3).png" alt="" class="issue__img" />
+        <div class="issue__text">
+          <p class="issue__title">issue #3</p>
+          <p class="issue__link">buy here</p>
+        </div>
+      </div>
+      <div id="issue-4" class="issue issue--no-4">
+        <img src="./assets/bts (4).png" alt="" class="issue__img" />
+        <div class="issue__text">
+          <p class="issue__title">issue #4</p>
+          <p class="issue__link">buy here</p>
+        </div>
+      </div>
+      <div id="issue-5" class="issue issue--no-5">
+        <img src="./assets/bts (5).png" alt="" class="issue__img" />
+        <div class="issue__text">
+          <p class="issue__title">issue #5</p>
+          <p class="issue__link">buy here</p>
+        </div>
+      </div>
+      <div id="issue-6" class="issue issue--no-6">
+        <img src="./assets/bts (6).png" alt="" class="issue__img" />
+        <div class="issue__text">
+          <p class="issue__title">issue #6</p>
+          <p class="issue__link">buy here</p>
+        </div>
+      </div>
+      <div id="issue-7" class="issue issue--no-7">
+        <img src="./assets/bts (7).png" alt="" class="issue__img" />
+        <div class="issue__text">
+          <p class="issue__title">issue #7</p>
+          <p class="issue__link">buy here</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="issue-8" class="issue issue--no-8">
+      <img src="./assets/bts (8).png" alt="" class="issue__img" />
+      <div class="issue__text">
+        <p class="issue__title">issue #8</p>
+        <p class="issue__link">buy here</p>
+      </div>
+    </div> -->
   </body>
 </html>
