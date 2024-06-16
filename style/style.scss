@@ -8,7 +8,12 @@ $bgcolors: #e30512, #1d3fbb, #ffbe00, #ff651a, #00c1b5, #fff, #fd5f8d;
   --fixed-m-x: 0.9375rem;
   --fixed-m-y: 1.25rem;
   --logo-h: 1.875rem;
+  --logo-h-md: 1rem;
 }
+
+$bp-lg: 62.5rem;
+$bp-md: 47.5rem;
+$bp-sm: 35rem;
 
 *,
 *::before,
@@ -23,6 +28,9 @@ html {
 
   // 실제로 스냅이 발생하는 곳에도 scroll-snap-align 줘야됨 두 개 다 줘야됨
   scroll-snap-type: y mandatory;
+  @media (width < $bp-lg) {
+    scroll-snap-type: none;
+  }
 }
 
 body {
@@ -38,9 +46,25 @@ body {
 
   // 스크롤하는거에 따라서 색이 바뀜
   animation-timeline: scroll();
+  @media (width < $bp-lg) {
+    animation-name: bg-change-margin;
+  }
 }
 
 @keyframes bg-change {
+  @for $i from 0 through 5 {
+    #{100 / 6 * $i}#{'%'},
+    #{100 / 6 * $i + 100 / 12}#{'%'} {
+      background-color: list.nth($bgcolors, 7 - $i);
+    }
+  }
+
+  100% {
+    background-color: list.nth($bgcolors, 1);
+  }
+}
+
+@keyframes bg-change-margin {
   @for $i from 0 through 5 {
     #{100 / 6 * $i}#{'%'},
     #{100 / 6 * $i + 100 / 12}#{'%'} {
@@ -140,6 +164,9 @@ img {
       // width주고 height를 주면 글자가 깨짐
       height: var(--logo-h);
       aspect-ratio: 519 / 58;
+      @media (width < $bp-md) {
+        height: var(--logo-h-md);
+      }
     }
 
     &-contact {
@@ -147,6 +174,9 @@ img {
 
       // 밑줄이 사라짐
       text-decoration: none;
+      @media (width < $bp-lg) {
+        display: none;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -165,6 +195,11 @@ img {
       text-transform: capitalize;
       list-style: none;
       transform: rotate(180deg);
+
+      // $bp-lg 보다  width가 작으면 화면에서 사라져라
+      @media (width < $bp-lg) {
+        display: none;
+      }
 
       > li {
         transform: rotate(180deg);
@@ -186,6 +221,11 @@ img {
 
       // 문장 길이를 비슷하게 정리해줌
       text-wrap: balance;
+
+      // $bp-lg 보다  width가 작으면 화면에서 사라져라
+      @media (width < $bp-lg) {
+        display: none;
+      }
     }
   }
 
@@ -217,8 +257,8 @@ img {
     }
   }
 
-  &__desc {
-  }
+  // &__desc {
+  // }
 }
 
 // #issue {
@@ -240,9 +280,6 @@ img {
 }
 
 .issue {
-  // 스크롤하면 센터를 기준으로 스냅이 들어감
-  scroll-snap-align: center;
-
   // 그리드 만들어줌
   display: grid;
 
@@ -260,6 +297,9 @@ img {
   // vh: 뷰포트의 높이
   // svh: 주소창이 있을 때 잡히는 높이
   min-height: 100svh;
+
+  // 스크롤하면 센터를 기준으로 스냅이 들어감
+  scroll-snap-align: center;
 
   // transform: rotate(180deg);
 
@@ -286,6 +326,7 @@ img {
   }
 
   &__title {
+    margin-block: 0;
     font-weight: 700;
     text-transform: capitalize;
   }
@@ -294,6 +335,76 @@ img {
     margin-block: 1lh 0;
     font-weight: 700;
     text-transform: uppercase;
+  }
+}
+
+.footer {
+  display: none;
+  @media (width < $bp-lg) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    justify-content: space-between;
+    padding-inline: var(--fixed-m-x);
+    padding-bottom: var(--fixed-m-y);
+  }
+
+  @media (width < $bp-sm) {
+    flex-direction: column-reverse;
+    gap: 1lh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @at-root a#{&},
+    & a {
+    // currentcolor: 현재 글자색
+    color: currentcolor;
+  }
+
+  &__contact {
+    right: var(--fixed-m-x);
+    bottom: var(--fixed-m-y);
+    font-weight: 700;
+
+    // 밑줄이 사라짐
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__about {
+    max-width: 30ch;
+    font-weight: 700;
+
+    // 문장 길이를 비슷하게 정리해줌
+    text-wrap: balance;
+    @media (width < $bp-sm) {
+      max-width: unset;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    font-size: 0.75rem;
+    font-weight: 400;
+
+    > a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__policy {
+    display: block;
+    margin-top: 1lh;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
