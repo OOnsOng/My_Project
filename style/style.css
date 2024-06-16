@@ -101,6 +101,13 @@ a.fixed, .fixed a {
 .fixed--pos-tl {
   top: var(--fixed-m-y);
   left: var(--fixed-m-x);
+  z-index: 1001;
+  padding: 10px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #13117b;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 .fixed--pos-tr {
   top: var(--fixed-m-y);
