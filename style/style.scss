@@ -81,32 +81,25 @@ body {
 //   #{calc(100 / 6 * 0.5)}#{'%'} {
 //     background-color: list.nth($bgcolors, 7);
 //   }
-
 //   #{calc(100 / 6)}#{'%'} {
 //     background-color: list.nth($bgcolors, 6);
 //   }
-
 //   #{calc(100 / 6 * 2)}#{'%'} {
 //     background-color: list.nth($bgcolors, 5);
 //   }
-
 //   #{calc(100 / 6 * 3)}#{'%'} {
 //     background-color: list.nth($bgcolors, 4);
 //   }
-
 //   #{calc(100 / 6 * 4)}#{'%'} {
 //     background-color: list.nth($bgcolors, 3);
 //   }
-
 //   #{calc(100 / 6 * 5)}#{'%'} {
 //     background-color: list.nth($bgcolors, 2);
 //   }
-
 //   100% {
 //     background-color: list.nth($bgcolors, 1);
 //   }
 // }
-
 img {
   display: block;
 }
@@ -120,7 +113,6 @@ img {
 
   // 화면에서 사라짐
   // display: none;
-
   @at-root a#{&},
     & a {
     // currentcolor: 현재 글자색
@@ -185,13 +177,12 @@ img {
 
     &-list {
       // display: flex;
-
       // 세로로 정렬됨 reverse 넣으면 아래에서부터 위로 정렬됨
       // flex-direction: column-reverse;
-
       padding-left: 0;
       margin-block: 0;
       line-height: 1.8rem;
+      text-align: right;
       text-transform: capitalize;
       list-style: none;
       transform: rotate(180deg);
@@ -235,7 +226,6 @@ img {
 
     > a {
       // text-decoration: underline;
-
       // 마우스를 올렸을 때 밑줄이 사라지게
       &:hover {
         text-decoration: none;
@@ -250,11 +240,13 @@ img {
     margin-top: 1lh;
 
     // text-decoration: underline;
-
     // 마우스를 올렸을 때 밑줄이 사라지게
     &:hover {
       text-decoration: none;
     }
+  }
+
+  &__desc {
   }
 
   // &__desc {
@@ -268,7 +260,6 @@ img {
 //     }
 //   }
 // }
-
 .wrapper {
   z-index: 1;
   display: flex;
@@ -280,6 +271,8 @@ img {
 }
 
 .issue {
+  // 스크롤하면 센터를 기준으로 스냅이 들어감
+
   // 그리드 만들어줌
   display: grid;
 
@@ -306,7 +299,6 @@ img {
   // p {
   //   margin-block: 0;
   // }
-
   &__img {
     // 그리드에서 위치 설정
     grid-row: 2;
