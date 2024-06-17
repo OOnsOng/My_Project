@@ -101,10 +101,8 @@ a.fixed, .fixed a {
 .fixed--pos-tl {
   top: var(--fixed-m-y);
   left: var(--fixed-m-x);
-  z-index: 1001;
-  padding: 10px;
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 2.1875rem;
+  font-weight: 700;
   color: #13117b;
   text-transform: uppercase;
   cursor: pointer;
@@ -199,7 +197,7 @@ a.fixed, .fixed a {
 .issue {
   display: grid;
   grid-template-rows: minmax(calc(2 * var(--fixed-m-y) + var(--logo-h)), 1fr) auto 5lh minmax(calc(2 * var(--fixed-m-y)), 1fr);
-  grid-template-columns: minmax(var(--fixed-m-x), 1fr) minmax(0, 26.25rem) minmax(var(--fixed-m-x), 1fr);
+  grid-template-columns: minmax(var(--fixed-m-x), 1fr) minmax(0, 31.25rem) minmax(var(--fixed-m-x), 1fr);
   min-height: 100svh;
   scroll-snap-align: center;
 }
@@ -208,9 +206,18 @@ a.fixed, .fixed a {
   grid-column: 2;
   justify-self: stretch;
 }
+.issue__img-program {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.9fr;
+  gap: 0.625rem;
+  width: 18.75rem;
+  padding-top: 2.5rem;
+  transform: translate(35%);
+}
 .issue__text {
   grid-row: 3;
   grid-column: 2;
+  padding-top: 1.25rem;
   text-align: center;
 }
 .issue__title {
@@ -218,12 +225,15 @@ a.fixed, .fixed a {
   font-weight: 700;
   text-transform: capitalize;
 }
+.issue__title-1 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
 .issue__link {
   margin-block: 1lh 0;
   font-weight: 700;
   text-transform: uppercase;
 }
-
 .footer {
   display: none;
 }

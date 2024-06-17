@@ -127,15 +127,11 @@ img {
     &-tl {
       top: var(--fixed-m-y);
       left: var(--fixed-m-x);
-      z-index: 1001; // 다른 요소 위에 나타나도록 설정
-      padding: 10px; // 텍스트 주변의 여백
-      font-size: 35px; // 텍스트 크기
-      font-weight: bold; // 텍스트 굵기
-      color: #13117b; // 텍스트 색상
-      text-transform: uppercase; // 대문자로 변환
-      cursor: pointer; // 클릭 가능한 커서 스타일
-      // background-color: rgb(0 0 0 / 50%); // 배경색 및 투명도
-      // border-radius: 5px; // 테두리 반경
+      font-size: 2.1875rem;
+      font-weight: 700;
+      color: #13117b;
+      text-transform: uppercase;
+      cursor: pointer;
 
       // 화면에 생김
       // display: block;
@@ -292,7 +288,7 @@ img {
       1fr
     );
   grid-template-columns:
-    minmax(var(--fixed-m-x), 1fr) minmax(0, 26.25rem)
+    minmax(var(--fixed-m-x), 1fr) minmax(0, 31.25rem)
     minmax(var(--fixed-m-x), 1fr);
 
   // min-heigh: 최소 높이
@@ -308,6 +304,7 @@ img {
   // p {
   //   margin-block: 0;
   // }
+
   &__img {
     // 그리드에서 위치 설정
     grid-row: 2;
@@ -315,12 +312,31 @@ img {
 
     // 가로에 딱맞게 들어가고 그리드보다 커지지 않음
     justify-self: stretch;
+
+    // width: 18.75rem;
+
+    &-program {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.9fr;
+      gap: 0.625rem;
+
+      // place-items: center;
+      width: 18.75rem;
+      padding-top: 2.5rem;
+
+      // padding-left: 4.0625rem;
+      transform: translate(35%);
+
+      // top: 50%;
+      // left: 50%;
+    }
   }
 
   &__text {
     // 그리드에서 위치 설정
     grid-row: 3;
     grid-column: 2;
+    padding-top: 1.25rem;
 
     // 텍스트 가운데 정렬
     text-align: center;
@@ -330,12 +346,24 @@ img {
     margin-block: 0;
     font-weight: 700;
     text-transform: capitalize;
+
+    &-1 {
+      font-size: 0.9375rem;
+      font-weight: 700;
+    }
   }
 
   &__link {
     margin-block: 1lh 0;
     font-weight: 700;
     text-transform: uppercase;
+
+    // &-img {
+    //   display: flex;
+    // }
+  }
+
+  &--no-7 {
   }
 }
 
