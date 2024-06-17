@@ -27,7 +27,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 1.125rem;
   line-height: 1.5625rem;
-  background-color: #fd5f8d;
+  background-color: #5a65e6;
   animation-name: bg-change;
   animation-timeline: scroll();
 }
@@ -39,48 +39,48 @@ body {
 
 @keyframes bg-change {
   0%, 8.3333333333% {
-    background-color: #fd5f8d;
+    background-color: #5a65e6;
   }
   16.6666666667%, 25% {
     background-color: #fff;
   }
   33.3333333333%, 41.6666666667% {
-    background-color: #00c1b5;
+    background-color: #fff;
   }
   50%, 58.3333333333% {
-    background-color: #ff651a;
+    background-color: rgb(255, 123, 123);
   }
   66.6666666667%, 75% {
-    background-color: #ffbe00;
+    background-color: #86ded6;
   }
   83.3333333333%, 91.6666666667% {
-    background-color: #1d3fbb;
+    background-color: #83cd9d;
   }
   100% {
-    background-color: #e30512;
+    background-color: #fff08f;
   }
 }
 @keyframes bg-change-margin {
   0%, 8.3333333333% {
-    background-color: #fd5f8d;
+    background-color: #5a65e6;
   }
   16.6666666667%, 25% {
     background-color: #fff;
   }
   33.3333333333%, 41.6666666667% {
-    background-color: #00c1b5;
+    background-color: #fff;
   }
   50%, 58.3333333333% {
-    background-color: #ff651a;
+    background-color: rgb(255, 123, 123);
   }
   66.6666666667%, 75% {
-    background-color: #ffbe00;
+    background-color: #86ded6;
   }
   83.3333333333%, 91.6666666667% {
-    background-color: #1d3fbb;
+    background-color: #83cd9d;
   }
   100% {
-    background-color: #e30512;
+    background-color: #fff08f;
   }
 }
 img {
@@ -103,7 +103,7 @@ a.fixed, .fixed a {
   left: var(--fixed-m-x);
   font-size: 2.1875rem;
   font-weight: 700;
-  color: #13117b;
+  color: #05043e;
   text-transform: uppercase;
   cursor: pointer;
 }
