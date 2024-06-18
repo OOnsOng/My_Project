@@ -8,6 +8,10 @@
       src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
       type="module"
     ></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
 
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/style.css" />
@@ -145,21 +149,30 @@
         </div>
       </div> -->
       <div id="issue-7" class="issue issue--no-7">
+        <p class="issue__welcome">welcome!</p>
+
         <dotlottie-player
+          class="lottie--song-left"
+          src="https://lottie.host/17a9af2d-872a-4066-8869-7dc5641afde6/HWjTTWtUs6.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <dotlottie-player
+          class="lottie--moon"
           id="lottie-animation"
           src="https://lottie.host/28d61b31-35f1-468d-90ca-d10c9389f612/OVgH1GRBb5.json"
           background="transparent"
           speed="1"
-          style="
-            display: none;
-            width: 1000px;
-            height: 1000px;
-            position: fixed;
-            z-index: 3;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          "
+          loop
+          autoplay
+        ></dotlottie-player>
+        <dotlottie-player
+          class="lottie--song-right"
+          src="https://lottie.host/17a9af2d-872a-4066-8869-7dc5641afde6/HWjTTWtUs6.json"
+          background="transparent"
+          speed="1"
           loop
           autoplay
         ></dotlottie-player>

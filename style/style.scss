@@ -131,9 +131,13 @@ img {
       left: var(--fixed-m-x);
       font-size: 2.1875rem;
       font-weight: 700;
-      color: #05043e;
+      color: #000;
       text-transform: uppercase;
       cursor: pointer;
+
+      // &:hover {
+
+      // }
 
       // 화면에 생김
       // display: block;
@@ -278,6 +282,8 @@ img {
 }
 
 .issue {
+  // position: absolute;
+
   // 스크롤하면 센터를 기준으로 스냅이 들어감
 
   // 그리드 만들어줌
@@ -320,11 +326,14 @@ img {
     &-program {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.9fr;
+
+      // padding-top: 2.5rem;
+      grid-row: 2 / span 1;
+      grid-column: 3;
       gap: 0.625rem;
 
       // place-items: center;
       width: 18.75rem;
-      padding-top: 2.5rem;
 
       // padding-left: 4.0625rem;
       transform: translate(35%);
@@ -365,7 +374,48 @@ img {
     // }
   }
 
+  &__welcome {
+    grid-row: 1;
+    grid-column: 2;
+    padding-block: 5rem;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
   &--no-7 {
+    // position: relative;
+    .lottie {
+      &--song-left {
+        grid-row: 2;
+        grid-column: 1;
+
+        // width: 21.875rem;
+        // height: 21.875rem;
+        padding-left: 6.25rem;
+
+        // padding-inline: 5rem;
+      }
+
+      &--moon {
+        grid-row: 2 / span 1;
+        grid-column: 2;
+
+        // width: 37.5rem;
+        // height: 37.5rem;
+      }
+
+      &--song-right {
+        grid-row: 2;
+        grid-column: 3;
+
+        // width: 21.875rem;
+        // height: 21.875rem;
+        padding-right: 6.25rem;
+      }
+    }
   }
 }
 
