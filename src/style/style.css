@@ -89,8 +89,8 @@ a.fixed, .fixed a {
 .project--exp1-detail {
   grid-row: 3;
   grid-column: 2;
-  padding-inline: 1.5625rem;
-  padding-top: 1.875rem;
+  padding-inline: 1.875rem;
+  padding-top: 2.5rem;
   font-weight: 700;
   text-align: center;
 }
@@ -101,6 +101,7 @@ a.fixed, .fixed a {
   grid-column: 2;
   -moz-column-gap: 0.625rem;
        column-gap: 0.625rem;
+  padding-top: 1.5625rem;
 }
 .project--img1-detail-2 {
   display: grid;

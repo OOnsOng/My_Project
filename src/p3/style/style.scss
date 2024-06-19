@@ -1,0 +1,190 @@
+@use 'sass:list';
+
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  background-color: #83cd9d;
+}
+
+:root {
+  --fixed-m-x: 0.9375rem;
+  --fixed-m-y: 1.25rem;
+  --logo-h: 1.875rem;
+  --logo-h-md: 1rem;
+}
+
+$bp-lg: 62.5rem;
+$bp-md: 47.5rem;
+$bp-sm: 35rem;
+
+.fixed {
+  // position: fixed;
+
+  // top: var(--fixed-m-y);
+  // left: var(--fixed-m-x);
+
+  // z-index: 2;
+  // padding: 0.5rem 1rem;
+
+  // // margin: 0;
+
+  // /* padding: 0.5rem 1rem; */
+  // font-size: 2.1875rem;
+  // font-weight: 700;
+  // color: #000;
+
+  // /* cursor: pointer; */
+  // text-decoration: none;
+  // text-transform: uppercase;
+
+  // /* padding-left: 18.75rem; */
+  position: fixed;
+
+  //앞으로 꺼내줌
+  z-index: 2;
+
+  // 화면에서 사라짐
+  // display: none;
+  @at-root a#{&},
+    & a {
+    // currentcolor: 현재 글자색
+    color: currentcolor;
+  }
+
+  p {
+    margin-block: 0;
+  }
+
+  &--pos {
+    &-tl {
+      top: var(--fixed-m-y);
+      left: var(--fixed-m-x);
+      padding: 0.5rem 1rem;
+      font-size: 2.1875rem;
+      font-weight: 700;
+      color: #000;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+        background-color: unset;
+        animation-name: 'rainbow';
+        animation-duration: 500ms;
+        animation-iteration-count: 4;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-rows: minmax(calc(2 * var(--fixed-m-y) + var(--logo-h)), 1fr) auto 30h minmax(
+      calc(2 * var(--fixed-m-y)),
+      1fr
+    );
+  grid-template-columns:
+    minmax(var(--fixed-m-x), 1fr) minmax(0, 43.75rem)
+    minmax(var(--fixed-m-x), 1fr);
+
+  // grid-template-rows: 1fr 2.5fr 1fr;
+  // grid-template-columns: 1fr 2.5fr 1fr;
+  row-gap: 2.5rem;
+
+  // max-width: 60rem;
+
+  // padding-inline: 1.5rem;
+  // margin-inline: auto;
+}
+
+.project {
+  // position: relative;
+
+  &--exp1-name {
+    grid-row: 1;
+    grid-column: 2;
+    padding-top: 10rem;
+
+    // padding-bottom: 0.75rem;
+    font-size: 1.875rem;
+    font-weight: 1000;
+    text-align: center;
+    text-transform: capitalize;
+
+    .font-weight_1 {
+      padding-bottom: 3.125rem;
+
+      // padding-bottom: 10.625rem;
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 1000;
+    }
+
+    .font-weight_2 {
+      padding-top: 6.25rem;
+      margin: 0;
+      color: #fff;
+    }
+  }
+
+  &--img1-main {
+    // position: absolute;
+    grid-row: 2;
+    grid-column: 2;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+
+    // justify-self: stretch;
+  }
+
+  &--exp1-detail {
+    grid-row: 3;
+    grid-column: 2;
+    padding-inline: 3.125rem;
+
+    // margin: auto;
+
+    // padding-top: 1.875rem;
+
+    // padding-bottom: 50px;
+
+    // padding-top: 1.25rem;
+    // margin-block: 0;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &--img1-detail-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 4;
+    grid-column: 2;
+    column-gap: 0.625rem;
+    padding-top: 0.625rem;
+  }
+
+  &--img1-detail-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 5;
+    grid-column: 2;
+    column-gap: 0.625rem;
+    padding-bottom: 6.25rem;
+  }
+}
