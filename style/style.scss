@@ -381,6 +381,15 @@ img {
     }
   }
 
+  &__exp {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
   &__text {
     // 그리드에서 위치 설정
     grid-row: 3;
@@ -411,7 +420,12 @@ img {
     padding-top: 0.625rem;
     margin-block: 0;
     font-weight: 700;
-    text-transform: capitalize;
+
+    // text-transform: capitalize;
+
+    // &-0 {
+    //   text-transform: none;
+    // }
 
     &-1 {
       font-size: 0.9375rem;
