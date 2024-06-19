@@ -177,12 +177,12 @@ img {
       bottom: var(--fixed-m-y);
     }
 
-    &-bl {
-      // 아무리 좁아져도 이 정도의 갭은 유지해줌
-      right: calc(var(--fixed-m-x) + 4rem + 6.25rem);
-      bottom: var(--fixed-m-y);
-      left: var(--fixed-m-x);
-    }
+    // &-bl {
+    //   // 아무리 좁아져도 이 정도의 갭은 유지해줌
+    //   right: calc(var(--fixed-m-x) + 4rem + 6.25rem);
+    //   bottom: var(--fixed-m-y);
+    //   left: var(--fixed-m-x);
+    // }
   }
 
   &--role {

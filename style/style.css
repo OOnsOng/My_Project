@@ -129,11 +129,6 @@ a.fixed, .fixed a {
   right: var(--fixed-m-x);
   bottom: var(--fixed-m-y);
 }
-.fixed--pos-bl {
-  right: calc(var(--fixed-m-x) + 4rem + 6.25rem);
-  bottom: var(--fixed-m-y);
-  left: var(--fixed-m-x);
-}
 .fixed--role-logo {
   height: var(--logo-h);
   aspect-ratio: 519/58;
