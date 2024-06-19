@@ -104,7 +104,24 @@ body {
 // }
 img {
   display: block;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    // cursor: pointer;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+    transform: scale(1.05);
+  }
 }
+
+// #clickableImage {
+//   cursor: pointer;
+//   transition: transform 0.2s, box-shadow 0.2s;
+
+//   &:hover {
+//     box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+//     transform: scale(1.05);
+//   }
+// }
 
 .fixed {
   // 스타일을 넣어주어도 그자리에 계속 있음
@@ -129,15 +146,21 @@ img {
     &-tl {
       top: var(--fixed-m-y);
       left: var(--fixed-m-x);
+      padding: 0.5rem 1rem;
       font-size: 2.1875rem;
       font-weight: 700;
       color: #000;
       text-transform: uppercase;
       cursor: pointer;
 
-      // &:hover {
-
-      // }
+      &:hover {
+        color: oklch(80% 0.4 100deg);
+        background-color: unset;
+        animation-name: 'rainbow';
+        animation-duration: 500ms;
+        animation-iteration-count: 4;
+        animation-fill-mode: forwards;
+      }
 
       // 화면에 생김
       // display: block;
@@ -326,8 +349,6 @@ img {
     &-program {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.9fr;
-
-      // padding-top: 2.5rem;
       grid-row: 2 / span 1;
       grid-column: 3;
       gap: 0.625rem;
@@ -335,8 +356,21 @@ img {
       // place-items: center;
       width: 18.75rem;
 
+      // @media (width < $bp-sm) {
+      //   flex-direction: column-reverse;
+      //   gap: 1lh;
+      //   align-items: center;
+      //   justify-content: center;
+      // }
+      height: var(--logo-h);
+      aspect-ratio: 519 / 58;
+      padding-top: 2.5rem;
+
       // padding-left: 4.0625rem;
       transform: translate(35%);
+      @media (width < $bp-md) {
+        height: var(--logo-h-md);
+      }
 
       // top: 50%;
       // left: 50%;
@@ -385,6 +419,18 @@ img {
     text-transform: capitalize;
   }
 
+  &--no-4 {
+    .click {
+      // display: block;
+      // width: 100%;
+      // height: 100%;
+      grid-row: 2;
+      grid-column: 2;
+    }
+
+    // justify-self: stretch;
+  }
+
   &--no-7 {
     // position: relative;
     .lottie {
@@ -417,6 +463,10 @@ img {
       }
     }
   }
+
+  // &--no-4 {
+  //   object-fit: cover;
+  // }
 }
 
 .footer {

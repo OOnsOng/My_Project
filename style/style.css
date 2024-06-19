@@ -85,6 +85,11 @@ body {
 }
 img {
   display: block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+img:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 .fixed {
@@ -101,11 +106,20 @@ a.fixed, .fixed a {
 .fixed--pos-tl {
   top: var(--fixed-m-y);
   left: var(--fixed-m-x);
+  padding: 0.5rem 1rem;
   font-size: 2.1875rem;
   font-weight: 700;
   color: #000;
   text-transform: uppercase;
   cursor: pointer;
+}
+.fixed--pos-tl:hover {
+  color: oklch(80% 0.4 100deg);
+  background-color: unset;
+  animation-name: "rainbow";
+  animation-duration: 500ms;
+  animation-iteration-count: 4;
+  animation-fill-mode: forwards;
 }
 .fixed--pos-tr {
   top: var(--fixed-m-y);
@@ -213,7 +227,15 @@ a.fixed, .fixed a {
   grid-column: 3;
   gap: 0.625rem;
   width: 18.75rem;
+  height: var(--logo-h);
+  aspect-ratio: 519/58;
+  padding-top: 2.5rem;
   transform: translate(35%);
+}
+@media (width < 47.5rem) {
+  .issue__img-program {
+    height: var(--logo-h-md);
+  }
 }
 .issue__text {
   grid-row: 3;
@@ -244,6 +266,10 @@ a.fixed, .fixed a {
   color: #fff;
   text-align: center;
   text-transform: capitalize;
+}
+.issue--no-4 .click {
+  grid-row: 2;
+  grid-column: 2;
 }
 .issue--no-7 .lottie--song-left {
   grid-row: 2;
