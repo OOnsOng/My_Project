@@ -392,6 +392,7 @@ img {
   }
 
   &__title {
+    padding-top: 1.25rem;
     margin-block: 0;
     font-weight: 700;
     text-transform: capitalize;
@@ -421,6 +422,9 @@ img {
     color: #fff;
     text-align: center;
     text-transform: capitalize;
+    @media (width < $bp-pg) {
+      display: none;
+    }
   }
 
   &--no-4 {

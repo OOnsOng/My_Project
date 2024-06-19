@@ -249,6 +249,7 @@ a.fixed, .fixed a {
   text-align: center;
 }
 .issue__title {
+  padding-top: 1.25rem;
   margin-block: 0;
   font-weight: 700;
   text-transform: capitalize;
@@ -271,6 +272,11 @@ a.fixed, .fixed a {
   color: #fff;
   text-align: center;
   text-transform: capitalize;
+}
+@media (width < 34.375rem) {
+  .issue__welcome {
+    display: none;
+  }
 }
 .issue--no-4 .click {
   grid-row: 2;
