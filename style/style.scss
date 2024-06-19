@@ -389,10 +389,26 @@ img {
 
     // 텍스트 가운데 정렬
     text-align: center;
+
+    // &--0 {
+    //   display: grid;
+    //   grid-template-columns: 1fr 1fr 1fr 1fr;
+    //   grid-row: 1;
+    // }
+  }
+
+  &__name {
+    grid-row: 2;
+    grid-column: 2;
+    padding-bottom: 1.875rem;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 1000;
+    text-transform: capitalize;
   }
 
   &__title {
-    padding-top: 1.25rem;
+    padding-top: 0.625rem;
     margin-block: 0;
     font-weight: 700;
     text-transform: capitalize;
@@ -401,10 +417,26 @@ img {
       font-size: 0.9375rem;
       font-weight: 700;
     }
+
+    // &--2 {
+    //   grid-row: 2;
+    //   grid-column: 2;
+    //   padding-bottom: 1.25rem;
+    //   font-size: 2.5rem;
+    //   font-weight: 1000;
+    //   text-transform: capitalize;
+    // }
   }
 
+  // &__exp {
+  //   padding: 0;
+  //   margin: 0;
+  // }
+
   &__link {
+    // padding-bottom: 0.3125rem;
     margin-block: 1lh 0;
+    font-size: 1.25rem;
     font-weight: 700;
     text-transform: uppercase;
 
