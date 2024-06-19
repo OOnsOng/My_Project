@@ -18,7 +18,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 1.125rem;
   line-height: 1.5625rem;
-  background-color: #ff9191;
+  background-color: #86ded6;
 }
 
 :root {
@@ -155,7 +155,8 @@ $bp-sm: 35rem;
     grid-row: 3;
     grid-column: 2;
     padding-inline: 1.5625rem;
-    padding-top: 1.875rem;
+
+    // padding-top: 1.875rem;
 
     // padding-bottom: 50px;
 
